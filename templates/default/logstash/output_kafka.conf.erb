@@ -1,0 +1,9 @@
+output {
+    kafka {
+        broker_list => "<%= @broker_list %>"
+        request_required_acks => <%= @request_required_acks %>
+        producer_type => "<%= @producer_type %>"
+        topic_id => "<%= @topic_id %>"
+        client_id => "<%= node['fqdn'] %>"
+    }
+}

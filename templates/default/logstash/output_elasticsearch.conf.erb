@@ -1,0 +1,9 @@
+output {
+  elasticsearch { host => "<%= @es_discover_host %>" 
+                  protocol => "<%= @es_protocol %>"
+                  index => "<%= @es_index_name %>"
+  }
+<% if @enable_stdout == true -%>
+  stdout { codec => rubydebug }
+<% end -%>
+}
