@@ -4,7 +4,7 @@ maintainer_email ''
 license          ''
 description      'Installs/Configures iaas-logservice'
 long_description 'Installs/Configures iaas-logservice'
-version          '0.1.2'
+version          '0.1.3'
 
 depends 'elasticsearch'
 depends 'apache_zookeeper'
