@@ -17,6 +17,9 @@ filter {
       ]
     }
     syslog_pri { }
+    mutate {
+      replace => ["host", "%{logsource}"]
+    }
     date {
       # season to taste for your own syslog format(s)
       match => [
