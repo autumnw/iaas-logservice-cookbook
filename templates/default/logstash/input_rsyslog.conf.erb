@@ -1,8 +1,9 @@
 input {
-  tcp {
-    port => "<%= @input_syslog_port %>"
-    host => "<%= @input_syslog_host %>"
-    type => "syslog"
+  syslog {
+    host => "<%= @rsyslog_bind_host %>"
+    port => <%= @rsyslog_bind_port %>
+    tags => "<%= @rsyslog_tags %>"
+    type => "<%= @rsyslog_type %>"
   }
 }
 

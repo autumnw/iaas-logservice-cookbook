@@ -1,18 +1,16 @@
 # Encoding: utf-8
 #
 # Cookbook Name:: iaas-logservice
-# Recipe:: logstash_collector
+# Recipe:: logstash
 #
 
-name = node['logstash']['instance_default']['collector_name']
+name = node['logstash']['instance_default']['instance_name']
 
-# these should all default correctly.  listing out for example.
 logstash_instance name do
   
   action            :create
 end
 
-# services are hard! Let's go LWRP'ing.   FIREBALL! FIREBALL! FIREBALL!
 logstash_service name do
   action      [:enable]
 end

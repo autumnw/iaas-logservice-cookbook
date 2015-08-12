@@ -1,7 +1,9 @@
+default['kibana']['site_name'] = 'kibana'
 default['kibana']['web_dir'] = '/opt/kibana/current'
 default['kibana']['webserver_port'] = 443
 default['kibana']['webserver_scheme'] = 'https://'
 default['kibana']['webserver'] = 'nginx'
+default['nginx']['dir'] = '/etc/nginx'
 default['nginx']['ssl_key'] = '/etc/nginx/ssl/kibana.key'
 default['nginx']['ssl_cert'] = '/etc/nginx/ssl/kibana.pem'
 default['nginx']['ssl_protocols'] = 'SSLv3 TLSv1 TLSv1.1 TLSv1.2'
@@ -14,7 +16,7 @@ default['kibana']['user'] = 'nginx'
 
 default['kibana']['es_server'] = 'localhost'
 default['kibana']['es_port'] = '9200'
-default['kibana']['usrname'] = 'admin'
+default['kibana']['username'] = 'admin'
 default['kibana']['password'] = 'KibanaIsFun!'
 
 default['kibana']['server_name'] = node['fqdn']

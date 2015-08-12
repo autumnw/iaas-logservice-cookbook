@@ -40,6 +40,12 @@ htpasswd "#{node['nginx']['dir']}/htpassword" do
   action :overwrite
 end
 
+## To file access error on hardened images
+file "#{node['nginx']['dir']}/htpassword" do
+  mode '0644'
+  action :touch
+end
+
 # write this for testing
 basic_auth_file = "#{node['nginx']['dir']}/htpassword.curl"
 file basic_auth_file do
