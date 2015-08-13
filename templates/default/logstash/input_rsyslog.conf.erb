@@ -8,7 +8,7 @@ input {
 }
 
 filter {
-  if [type] == "syslog" {
+  if [type] == "<%= @rsyslog_type %>" {
     grok {
       overwrite => "message"
       match => [
